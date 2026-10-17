@@ -27,7 +27,7 @@ app.use("/api/agent", protect, proxyWithHeader(process.env.AGENT_SERVICE))
 app.use("/api/billing",protect, proxyWithHeader(process.env.BILLING_SERVICE))
 app.get("/api/me", protect, getCurrentUser)
 app.get("/",(req, res)=>{
-    res.json({message:"Gateway is running"})
+    res.json({message:"Gateway is running v2"})
 })
 
 app.listen(port, ()=>{
